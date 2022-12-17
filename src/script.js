@@ -22,7 +22,7 @@ window.onload = () => {
 function gererTouches(event){
     let touche;
 
-    const listeTouches = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", ".", "%"];
+    const listeTouches = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "-", "*", "/", ".", "%", "Racine", "Puissance"];
 
     if(event.type === "keydown"){
         if(listeTouches.includes(event.key)){
@@ -44,6 +44,7 @@ function gererTouches(event){
                 operation = null
                 ecranElt.innerText = 0;
                 break;
+
             // Calculs
             case "+":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.add(precedent, parseFloat(affichage), operation);
@@ -51,30 +52,49 @@ function gererTouches(event){
                 operation = touche;
                 affichage = "";
                 break;
+
             case "-":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.substraction(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 operation = touche;
                 affichage = "";
                 break;
+
             case "*":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.multiplication(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 operation = touche;
                 affichage = "";
                 break;
+
             case "/":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.pourcentage(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 operation = touche;
                 affichage = "";
                 break;
+
             case "%":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.pourcentage(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 operation = touche;
                 affichage = "";
                 break;
+
+            case "Racine":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.racine(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
+
+            case "Puissance":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.puissance(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
+
             case "=":
                 precedent = (precedent === 0) ? parseFloat(affichage) : calculator.result(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
@@ -86,12 +106,5 @@ function gererTouches(event){
         }
     }
 }
-
-// /**
-//  * @param {number} nb1 
-//  * @param {number} nb2 
-//  * @param {string} operation 
-//  * @returns number
-//  */
 
 

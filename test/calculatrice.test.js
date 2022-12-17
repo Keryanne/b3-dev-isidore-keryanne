@@ -33,4 +33,16 @@ describe('Testing the Calculator Functions', function(){
         expect(calculator.pourcentage(20)).to.equal(0.2);
         done();
     });
+
+    it('6. Calcul racine', function(done){
+        let calculator = new Calculator();
+        expect(calculator.racine(4)).to.equal(2);
+        done();
+    });
+
+    it('7. Calcul puissance', function(done){
+        let calculator = new Calculator();
+        expect(calculator.puissance(8, 2)).to.equal(64);
+        done();
+    });
 } )

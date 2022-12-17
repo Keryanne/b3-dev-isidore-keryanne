@@ -27,6 +27,16 @@ class Calculator {
         this.result = nb1 / 100;
         return this.result;
     }
+
+    puissance(nb1, nb2){
+        this.result = Math.pow(nb1, nb2);
+        return this.result;
+    }
+
+    racine(nb1){
+        this.result = Math.sqrt(nb1);
+        return this.result;
+    }
 }
 
 module.exports = {
