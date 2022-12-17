@@ -7,6 +7,7 @@
 > npm install mocha
 >
 > npm install chai
+
 Lancer le projet sur un serveur local
 
 ### Plan de test pour les deux méthodes
