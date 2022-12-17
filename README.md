@@ -26,32 +26,19 @@
 
 
 **Scénario**: Multiplier deux nombres<br>
+  Étant donné que j'ai saisi "2" dans la calculatrice<br>
+  Et que j'ai saisi "3" dans la calculatrice<br>
+  Lorsque je presse le bouton "*"<br>
+  Alors le résultat affiché doit être "6"<br>
 
-  Étant donné que j'ai saisi "2" dans la calculatrice
+**Scénario**: Diviser deux nombres<br>
+  Étant donné que j'ai saisi "6" dans la calculatrice<br>
+  Et que j'ai saisi "3" dans la calculatrice<br>
+  Lorsque je presse le bouton "/"<br>
+  Alors le résultat affiché doit être "2"<br>
   
-  Et que j'ai saisi "3" dans la calculatrice
-  
-  Lorsque je presse le bouton "*"
-  
-  Alors le résultat affiché doit être "6"
-  
-
-**Scénario**: Diviser deux nombres
-
-  Étant donné que j'ai saisi "6" dans la calculatrice
-  
-  Et que j'ai saisi "3" dans la calculatrice
-  
-  Lorsque je presse le bouton "/"
-  
-  Alors le résultat affiché doit être "2"
-  
-
-**Scénario**: Calculer le pourcentage d’un nombre
-
-  Étant donné que j'ai saisi “20" dans la calculatrice
-  
-  Lorsque je presse le bouton "%"
-  
-  Alors le résultat affiché doit être "0.2"
+**Scénario**: Calculer le pourcentage d’un nombre<br>
+  Étant donné que j'ai saisi “20" dans la calculatrice<br>
+  Lorsque je presse le bouton "%"<br>
+  Alors le résultat affiché doit être "0.2"<br>
 
