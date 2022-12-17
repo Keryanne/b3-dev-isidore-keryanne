@@ -12,25 +12,20 @@
 
 #### BDD 
 
-**Scénario**: Additionner deux nombres
+**Scénario**: Additionner deux nombres<br>
+  Étant donné que j'ai saisi "2" dans la calculatrice<br>
+  Et que j'ai saisi "5" dans la calculatrice<br>
+  Lorsque je presse le bouton "="<br>
+  Alors le résultat affiché doit être "7"<br>
 
-  Étant donné que j'ai saisi "2" dans la calculatrice
-  
-  Et que j'ai saisi "5" dans la calculatrice
-  
-  Lorsque je presse le bouton "="
-  
-  Alors le résultat affiché doit être "7"
-
-
-**Scénario**: Soustraire deux nombres.
-  Étant donné que j'ai saisi "10" dans la calculatrice.
-  Et que j'ai saisi "8" dans la calculatrice.
-  Lorsque je presse le bouton "-".
-  Alors le résultat affiché doit être "2".
+**Scénario**: Soustraire deux nombres<br>
+  Étant donné que j'ai saisi "10" dans la calculatrice<br>
+  Et que j'ai saisi "8" dans la calculatrice<br>
+  Lorsque je presse le bouton "-"<br>
+  Alors le résultat affiché doit être "2"<br>
 
 
-**Scénario**: Multiplier deux nombres
+**Scénario**: Multiplier deux nombres<br>
 
   Étant donné que j'ai saisi "2" dans la calculatrice
   
