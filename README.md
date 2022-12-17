@@ -21,7 +21,7 @@
   Lorsque je presse le bouton "="
   
   Alors le résultat affiché doit être "7"
-
+##
 
 **Scénario**: Soustraire deux nombres
 
@@ -32,7 +32,7 @@
   Lorsque je presse le bouton "-"
   
   Alors le résultat affiché doit être "2"
-
+##
 
 **Scénario**: Multiplier deux nombres
 
