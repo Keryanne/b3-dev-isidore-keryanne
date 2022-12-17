@@ -1,0 +1,22 @@
+{
+  "name": "b3-dev-isidore-keryanne",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Keryanne/b3-dev-isidore-keryanne.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Keryanne/b3-dev-isidore-keryanne/issues"
+  },
+  "homepage": "https://github.com/Keryanne/b3-dev-isidore-keryanne#readme",
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}
