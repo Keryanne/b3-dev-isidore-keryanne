@@ -1,10 +1,15 @@
+const jsdom = require('jsdom');
+const { Calculator } = require('./calculator');
+
+document = new jsdom.JSDOM().window.document;
+window = new jsdom.JSDOM().window;
+
 const ecranElt = document.querySelector("#ecran");
 
 let precedent = 0;
-
 let affichage = "";
-
 let operation = null;
+let calculator = new Calculator();
 
 window.onload = () => {
     let touches = document.querySelectorAll("span");
@@ -41,17 +46,37 @@ function gererTouches(event){
                 break;
             // Calculs
             case "+":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.add(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
             case "-":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.substraction(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
             case "*":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.multiplication(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
             case "/":
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.pourcentage(precedent, parseFloat(affichage), operation);
+                ecranElt.innerText = precedent;
+                operation = touche;
+                affichage = "";
+                break;
             case "%":
-                precedent = (precedent === 0) ? parseFloat(affichage) : calculer(precedent, parseFloat(affichage), operation);
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.pourcentage(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 operation = touche;
                 affichage = "";
                 break;
             case "=":
-                precedent = (precedent === 0) ? parseFloat(affichage) : calculer(precedent, parseFloat(affichage), operation);
+                precedent = (precedent === 0) ? parseFloat(affichage) : calculator.result(precedent, parseFloat(affichage), operation);
                 ecranElt.innerText = precedent;
                 affichage = precedent;
                 precedent = 0;
@@ -62,18 +87,11 @@ function gererTouches(event){
     }
 }
 
-/**
- * @param {number} nb1 
- * @param {number} nb2 
- * @param {string} operation 
- * @returns number
- */
-function calculer(nb1, nb2, operation){
-    nb1 = parseFloat(nb1);
-    nb2 = parseFloat(nb2);
-    if(operation === "+") return nb1 + nb2;
-    if(operation === "-") return nb1 - nb2;
-    if(operation === "*") return nb1 * nb2;
-    if(operation === "/") return nb1 / nb2;
-    if(operation === "%") return nb1 / 100;
-}
+// /**
+//  * @param {number} nb1 
+//  * @param {number} nb2 
+//  * @param {string} operation 
+//  * @returns number
+//  */
+
+
