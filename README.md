@@ -21,18 +21,14 @@
   Lorsque je presse le bouton "="
   
   Alors le résultat affiché doit être "7"
-##
 
-**Scénario**: Soustraire deux nombres
 
-  Étant donné que j'ai saisi "10" dans la calculatrice
-  
-  Et que j'ai saisi "8" dans la calculatrice
-  
-  Lorsque je presse le bouton "-"
-  
-  Alors le résultat affiché doit être "2"
-##
+**Scénario**: Soustraire deux nombres.
+  Étant donné que j'ai saisi "10" dans la calculatrice.
+  Et que j'ai saisi "8" dans la calculatrice.
+  Lorsque je presse le bouton "-".
+  Alors le résultat affiché doit être "2".
+
 
 **Scénario**: Multiplier deux nombres
 
